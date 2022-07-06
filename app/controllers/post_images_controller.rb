@@ -11,6 +11,9 @@ class PostImagesController < ApplicationController
   end
 
   def index
+     @post_images = PostImage.all
+    # 複数型 = モデル名.allにする！
+    # sample_app/app/controlers/lists_controller.rbでも同じように書いてある
   end
 
   def show

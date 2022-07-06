@@ -1,10 +1,14 @@
 class ApplicationController < ActionController::Base
  # 6章で以下を追加
   before_action :configure_permitted_parameters, if: :devise_controller?
- # 7章で以下を追加
-   def after_sign_in_path_for(resource)
-     about_path
-   end
+  # 11章で以下を追加
+  def after_sign_in_path_for(resource)
+    post_images_path
+  end
+ # 7章で以下を追加したが11章で削除した
+  # def after_sign_in_path_for(resource)
+    # about_path
+  # end
 
   def after_sign_out_path_for(resource)
     about_path
