@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 root to: "homes#top"
 get'top' => 'homes#top'
 
-resources :post_images, only: [:new, :create, :index, :show]
+resources :post_images, only: [:new, :create, :index, :show, :destroy]
 # アプリケーションを完成させよう1-1章の「Listsコントローラを作成する」と
 # 〃1-7章のルーティングを簡単に記述するに
 # 〃2-9章のresourcesメソッドのオプション
