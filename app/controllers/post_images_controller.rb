@@ -10,14 +10,16 @@ class PostImagesController < ApplicationController
     redirect_to post_images_path
   end
 
-  def index
+  def index#11章で以下を記述
      @post_images = PostImage.all
     # 複数型 = モデル名.allにする！
     # sample_app/app/controlers/lists_controller.rbでも同じように書いてある
   end
 
-  def show
+  def show #12章で以下を記述したらエラー
+    @post_image = PostImage.find(params[:id])
   end
+# @listって打ってた…バカス…
 
   private
 
