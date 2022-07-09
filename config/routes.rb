@@ -6,7 +6,7 @@ get "/homes/about" => "homes#about", as: "about"
 get'top' => 'homes#top'
 
 resources :post_images, only: [:new, :create, :index, :show, :destroy]
-resources :users, only: [:show, :edit]#15章で
+resources :users, only: [:show, :edit, :update]#15章で
 # アプリケーションを完成させよう1-1章の「Listsコントローラを作成する」と
 # 〃1-7章のルーティングを簡単に記述するに
 # 〃2-9章のresourcesメソッドのオプション
