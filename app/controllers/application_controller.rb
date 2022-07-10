@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  # 20章で以下を追加
+  # ログインが済んでいない状態でトップページ以外にアクセスできない
+  before_action :authenticate_user!, except: [:top]
  # 6章で以下を追加
   before_action :configure_permitted_parameters, if: :devise_controller?
   # 11章で以下を追加
