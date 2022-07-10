@@ -5,6 +5,7 @@ devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 has_many :post_images, dependent: :destroy
 has_many :post_comments, dependent: :destroy#18章で追加
+has_many :favorites, dependent: :destroy#19勝で
 
 
 

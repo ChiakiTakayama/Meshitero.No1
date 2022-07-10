@@ -6,8 +6,10 @@ get "/homes/about" => "homes#about", as: "about"
 get'top' => 'homes#top'
 
 resources :post_images, only: [:new, :create, :index, :show, :destroy] do
-resources:post_comments, only: [:create, :destroy]
-    # do~endまで18章で追加
+ resource :favorites, only: [:create, :destroy]
+# favoritesは19章で追加
+ resources :post_comments, only: [:create, :destroy]
+    # doとpost_commentsは18章で追加
 end
 resources :users, only: [:show, :edit, :update]#15章で
 # アプリケーションを完成させよう1-1章の「Listsコントローラを作成する」と
