@@ -17,7 +17,8 @@ class PostImagesController < ApplicationController
   end
 
   def show #12章で以下を記述
-    @post_image = PostImage.find(params[:id])
+   @post_image = PostImage.find(params[:id])
+   @post_comment = PostComment.new#18章で
   end
 # @listって打ってた…バカス…
   def destroy
