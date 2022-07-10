@@ -6,8 +6,11 @@ class PostImagesController < ApplicationController
   def create
     @post_image = PostImage.new(post_image_params)
     @post_image.user_id = current_user.id
-    @post_image.save
-    redirect_to post_images_path
+    if @post_image.save#21章でifを追加
+    　redirect_to post_images_path
+    else
+      render :new
+    end#ここまで21章で変更
   end
 
   def index#11章で以下を記述
