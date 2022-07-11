@@ -2,10 +2,9 @@ class UsersController < ApplicationController
   # このページ全て15章で追加
   def show
     @user = User.find(params[:id])
-    @post_images = @user.post_images
+    @post_images = @user.post_images.page(params[:page])
+    # 22章で変更する前は@post_images = @user.post_images
   end
-  # ArgumentErrorが出る。
-  # user.rbのdef get_profile_imageの後ろに(width,height)を設定しなければならない
 
   def edit
     @user = User.find(params[:id])
